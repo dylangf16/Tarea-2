@@ -1,0 +1,404 @@
+        -:    0:Source:/home/dylan16/Documents/Datos2/Tarea#2/Tarea#2/Tarea-2/Server.cpp
+        -:    0:Graph:/home/dylan16/Documents/Datos2/Tarea#2/Tarea#2/Tarea-2/cmake-build-debug-coverage/CMakeFiles/Tarea_2.dir/Server.cpp.gcno
+        -:    0:Data:/home/dylan16/Documents/Datos2/Tarea#2/Tarea#2/Tarea-2/cmake-build-debug-coverage/CMakeFiles/Tarea_2.dir/Server.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by dylan16 on 25/04/22.
+        -:    3://
+        -:    4:#include "Server.h"
+        -:    5:#include <iostream>
+        -:    6:#include <unistd.h>
+        -:    7:#include <sys/socket.h>
+        -:    8:#include <netdb.h>
+        -:    9:#include <arpa/inet.h>
+        -:   10:#include <string.h>
+        -:   11:#include <string>
+        -:   12:#include "/home/dylan16/Documents/Datos2/Proyecto01/Proyecto-01-CE-2103/Matriz/Source_Files/Hashmap.cpp"
+        -:   13:#include "/home/dylan16/Documents/Datos2/Proyecto01/Proyecto-01-CE-2103/Matriz/Source_Files/matriz_dinamica.cpp"
+        -:   14:#include "/home/dylan16/Documents/Datos2/Proyecto01/Proyecto-01-CE-2103/Matriz/Source_Files/matriz.cpp"
+        -:   15:
+        -:   16:using namespace std;
+        -:   17://Función principal que ejecuta el servidor
+function _Z6ServerNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 5 returned 100% blocks executed 70%
+        5:   18:string Server(string comando_completo)
+        -:   19:{
+        -:   20:    // Create a socket
+        5:   21:    int listening = socket(AF_INET, SOCK_STREAM, 0);
+        5:   21-block  0
+call    0 returned 5
+        5:   22:    if (listening == -1)
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5
+        -:   23:    {
+    #####:   24:        cerr << "Can't create a socket! Quitting" << endl;
+    %%%%%:   24-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   24-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   25:        return "-1";
+    %%%%%:   25-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   25-block  1
+call    4 never executed
+    $$$$$:   25-block  2
+call    5 never executed
+    $$$$$:   25-block  3
+        -:   26:    }
+        -:   27:
+        -:   28:    // Bind the ip address and port to a socket
+        -:   29:    sockaddr_in hint;
+        5:   30:    hint.sin_family = AF_INET;
+        5:   31:    hint.sin_port = htons(54000);
+        5:   32:    inet_pton(AF_INET, "0.0.0.0", &hint.sin_addr);
+        5:   32-block  0
+call    0 returned 5
+        -:   33:
+        5:   34:    bind(listening, (sockaddr*)&hint, sizeof(hint));
+call    0 returned 5
+        -:   35:
+        -:   36:    // Tell Winsock the socket is for listening
+        -:   37:    //listen(listening, SOMAXCONN);
+        -:   38:
+        -:   39:    // Wait for a connection
+        -:   40:    sockaddr_in client;
+        5:   41:    socklen_t clientSize = sizeof(client);
+        -:   42:
+        -:   43:    //int clientSocket = accept(listening, (sockaddr*)&client, &clientSize);
+        -:   44:
+        -:   45:    char host[NI_MAXHOST];      // Client's remote name
+        -:   46:    char service[NI_MAXSERV];   // Service (i.e. port) the client is connect on
+        -:   47:
+        -:   48:    //memset(host, 0, NI_MAXHOST); // same as memset(host, 0, NI_MAXHOST);
+        -:   49:    //memset(service, 0, NI_MAXSERV);
+        -:   50:
+        5:   51:    if (getnameinfo((sockaddr*)&client, sizeof(client), host, NI_MAXHOST, service, NI_MAXSERV, 0) == 0)
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        5:   51-block  0
+branch  3 taken 5 (fallthrough)
+branch  4 taken 0
+        -:   52:    {
+        -:   53:        //cout << host << " connected on port " << service << endl;
+        -:   54:    }
+        -:   55:    else
+        -:   56:    {
+        5:   57:        inet_ntop(AF_INET, &client.sin_addr, host, NI_MAXHOST);
+        5:   57-block  0
+call    0 returned 5
+        -:   58:        //cout << host << " connected on port " << ntohs(client.sin_port) << endl;
+        -:   59:    }
+        -:   60:
+        -:   61:    // Close listening socket
+        5:   62:    close(listening);
+        5:   62-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   63:
+        -:   64:    // While loop: accept and echo message back to client
+        -:   65:    char buf[4096];
+       10:   66:    string num;
+        5:   66-block  0
+call    0 returned 5
+call    1 returned 5
+    $$$$$:   66-block  1
+call    2 never executed
+        -:   67:    int valores;
+        -:   68:
+        -:   69:    if (true)
+        -:   70:    {
+        5:   71:        memset(buf, 0, 4096);
+       10:   72:        string command = "NULL";
+call    0 returned 5
+call    1 returned 5
+branch  2 taken 5 (fallthrough)
+branch  3 taken 0 (throw)
+call    4 returned 5
+    $$$$$:   72-block  0
+    $$$$$:   72-block  1
+call    5 never executed
+       10:   73:        string val1 = "NULL";
+call    0 returned 5
+call    1 returned 5
+branch  2 taken 5 (fallthrough)
+branch  3 taken 0 (throw)
+call    4 returned 5
+    $$$$$:   73-block  0
+    $$$$$:   73-block  1
+call    5 never executed
+       10:   74:        string val2 = "NULL";
+call    0 returned 5
+call    1 returned 5
+branch  2 taken 5 (fallthrough)
+branch  3 taken 0 (throw)
+call    4 returned 5
+    $$$$$:   74-block  0
+    $$$$$:   74-block  1
+call    5 never executed
+       10:   75:        string val3 = "NULL";
+call    0 returned 5
+call    1 returned 5
+branch  2 taken 5 (fallthrough)
+branch  3 taken 0 (throw)
+        5:   75-block  0
+call    4 returned 5
+    $$$$$:   75-block  1
+    $$$$$:   75-block  2
+call    5 never executed
+        -:   76:
+        5:   77:        int init = 0;
+        5:   78:        int end = 0;
+        -:   79:
+        -:   80:
+        -:   81:        // Wait for client to send data
+        -:   82:        //int bytesReceived = recv(clientSocket, buf, 4096, 0);
+        5:   83:        if (valores == -1)
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5
+        -:   84:        {
+    #####:   85:            cerr << "Error in recv(). Quitting" << endl;
+    %%%%%:   85-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   85-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:   86:            //break;
+        -:   87:        }
+        -:   88:
+        -:   89:        if (valores == 0)
+        -:   90:        {
+        -:   91:            //cout << "Client disconnected " << endl;
+        -:   92:            //break;
+        -:   93:        }
+        -:   94:
+        -:   95:
+        -:   96:
+        -:   97:        //Analizar y dividir string recibido
+        -:   98:        //std::string linea = string(buf,0,bytesReceived);
+        5:   99:        int conteo = 0;
+        5:  100:        linea = comando_completo;
+        5:  100-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+       25:  101:        while(end=linea.find("-", init), end >= 0){
+       25:  101-block  0
+call    0 returned 25
+branch  1 taken 20 (fallthrough)
+branch  2 taken 5
+       20:  102:            if (command == "NULL" & conteo == 0){
+       20:  102-block  0
+call    0 returned 20
+branch  1 taken 5 (fallthrough)
+branch  2 taken 15
+        5:  103:                command = linea.substr(init, end-init);
+        5:  103-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        5:  103-block  1
+call    3 returned 5
+call    4 returned 5
+        5:  104:                init = end + 1;
+        -:  105:            }
+       20:  106:            if (val1 == "NULL" & conteo == 1){
+       20:  106-block  0
+call    0 returned 20
+branch  1 taken 5 (fallthrough)
+branch  2 taken 15
+        5:  107:                val1 = linea.substr(init, end-init);
+        5:  107-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        5:  107-block  1
+call    3 returned 5
+call    4 returned 5
+        5:  108:                init = end + 1;
+        -:  109:            }
+       20:  110:            if (val2 == "NULL" & conteo == 2){
+       20:  110-block  0
+call    0 returned 20
+branch  1 taken 5 (fallthrough)
+branch  2 taken 15
+        5:  111:                val2 = linea.substr(init, end-init);
+        5:  111-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        5:  111-block  1
+call    3 returned 5
+call    4 returned 5
+        5:  112:                init = end + 1;
+        -:  113:            }
+       20:  114:            if (val3 == "NULL" & conteo == 3){
+       20:  114-block  0
+call    0 returned 20
+branch  1 taken 5 (fallthrough)
+branch  2 taken 15
+        5:  115:                val3 = linea.substr(init, end-init);
+        5:  115-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        5:  115-block  1
+call    3 returned 5
+call    4 returned 5
+        5:  116:                init = end + 1;
+        -:  117:            }
+       20:  118:            conteo +=1;
+       20:  118-block  0
+        -:  119:        }
+        -:  120:
+        5:  121:        num = val1;
+        5:  121-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  122:
+        -:  123:        //Ejecuta un comando según el primer valor del string recibido
+        5:  124:        if(command == "IMG"){
+        5:  124-block  0
+call    0 returned 5
+branch  1 taken 1 (fallthrough)
+branch  2 taken 4
+        1:  125:            num = buscar(0,0,val1);
+        1:  125-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  125-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  125-block  2
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:  125-block  3
+call    9 never executed
+    $$$$$:  125-block  4
+        -:  126:            //send(clientSocket, num.c_str(), num.size() + 1, 0);
+        1:  127:            cout << "Desde servidor" << endl;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  127-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  128:            cout << num << endl;
+        1:  128-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  128-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        -:  129:        }
+        -:  130:
+        5:  131:        if(command == "Matrix_mem"){
+        5:  131-block  0
+call    0 returned 5
+branch  1 taken 1 (fallthrough)
+branch  2 taken 4
+        1:  132:            num = rellenarMatriz(stoi(val1),stoi(val2),val3);
+        1:  132-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  132-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  132-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  132-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  132-block  4
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  132-block  5
+call   15 never executed
+    $$$$$:  132-block  6
+        1:  133:            mostrar_matriz_disco(stoi(val1),stoi(val2));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  133-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  133-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        -:  134:            //send(clientSocket, num.c_str(), num.size() + 1, 0);
+        -:  135:        }
+        -:  136:
+        5:  137:        if(command == "Start"){
+        5:  137-block  0
+call    0 returned 5
+branch  1 taken 1 (fallthrough)
+branch  2 taken 4
+        1:  138:            generarMatriz();
+        1:  138-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  139:            generarHash();
+        1:  139-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  140:            num = "Terminado";
+        1:  140-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  141:            //send(clientSocket, num.c_str(), num.size() + 1, 0);
+        -:  142:        }
+        5:  143:        if(command == "Mix"){
+        5:  143-block  0
+call    0 returned 5
+branch  1 taken 1 (fallthrough)
+branch  2 taken 4
+        1:  144:            revolverMatriz();
+        1:  144-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  145:            num = "Terminado";
+        1:  145-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  146:            //send(clientSocket, num.c_str(), num.size() + 1, 0);
+        -:  147:        }
+        -:  148:    }
+        -:  149:
+        -:  150:    // Close the socket
+        -:  151:    //close(clientSocket);
+        -:  152:
+        5:  153:    return num;
+call    0 returned 5
+        -:  154:}
+        -:  155:
+        -:  156:

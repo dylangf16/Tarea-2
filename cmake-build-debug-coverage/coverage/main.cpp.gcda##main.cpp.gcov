@@ -1,0 +1,605 @@
+        -:    0:Source:/home/dylan16/Documents/Datos2/Tarea#2/Tarea#2/Tarea-2/main.cpp
+        -:    0:Graph:/home/dylan16/Documents/Datos2/Tarea#2/Tarea#2/Tarea-2/cmake-build-debug-coverage/CMakeFiles/Tarea_2.dir/main.cpp.gcno
+        -:    0:Data:/home/dylan16/Documents/Datos2/Tarea#2/Tarea#2/Tarea-2/cmake-build-debug-coverage/CMakeFiles/Tarea_2.dir/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <iostream>
+        -:    2:#include <gtest/gtest.h>
+        -:    3:#include <gmock/gmock.h>
+        -:    4:#include "Server.h"
+        -:    5:#include <string>
+        -:    6:#include <fstream>
+        -:    7:using namespace std;
+        -:    8:
+function _Z13buscar_PruebaiiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 100% blocks executed 59%
+        2:    9:std::string buscar_Prueba(int init, int end, std::string num_a_buscar){
+        4:   10:    std::ifstream archivo("/home/dylan16/Documents/Datos2/Proyecto01/Proyecto-01-CE-2103/Matriz/Source_Files/hash.txt");
+        2:   10-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 2
+    $$$$$:   10-block  1
+call    4 never executed
+        4:   11:    std::string linea;
+        2:   11-block  0
+call    0 returned 2
+call    1 returned 2
+    $$$$$:   11-block  1
+call    2 never executed
+        4:   12:    std::string texto;
+call    0 returned 2
+        2:   12-block  0
+call    1 returned 2
+    $$$$$:   12-block  1
+call    2 never executed
+        2:   13:    int i = 0;
+       2*:   14:    while (i < 500){
+        2:   14-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+    %%%%%:   14-block  1
+        2:   15:        getline(archivo,linea);
+        2:   15-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   16:        while (end = linea.find("-", init), end >=0){
+        4:   16-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0
+        2:   16-block  1
+        4:   17:            if(linea.substr(init, end - init) == num_a_buscar){
+        4:   17-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   17-block  1
+call    3 returned 4
+call    4 returned 4
+branch  5 taken 2 (fallthrough)
+branch  6 taken 2
+        2:   18:                init = end + 1;
+        2:   19:                return linea.substr(init, end - init);
+        2:   19-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   20:            }
+        2:   21:            i++;
+        2:   22:            getline(archivo,linea);
+        2:   22-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   23:        }
+    #####:   24:        i++;
+    #####:   25:        getline(archivo,linea);
+    %%%%%:   25-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   26:    }
+    #####:   27:    return "Fallido";
+    %%%%%:   27-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   27-block  1
+call    4 never executed
+    $$$$$:   27-block  2
+call    5 never executed
+    $$$$$:   27-block  3
+        -:   28:}
+        -:   29:
+        4:   30:TEST(PruebasServer, DesgloseComando){
+        2:   31:    std::string commando = "COMMAND-1-2-3-0";
+       1*:   32:    EXPECT_TRUE("1" == Server(commando));
+        1:   33:}
+------------------
+_ZN34PruebasServer_DesgloseComando_TestC2Ev:
+function _ZN34PruebasServer_DesgloseComando_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   30:TEST(PruebasServer, DesgloseComando){
+        1:   30-block  0
+call    0 returned 1
+------------------
+_ZN34PruebasServer_DesgloseComando_TestD0Ev:
+function _ZN34PruebasServer_DesgloseComando_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   30:TEST(PruebasServer, DesgloseComando){
+        1:   30-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN34PruebasServer_DesgloseComando_TestD2Ev:
+function _ZN34PruebasServer_DesgloseComando_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   30:TEST(PruebasServer, DesgloseComando){
+        1:   30-block  0
+call    0 returned 1
+------------------
+_ZN34PruebasServer_DesgloseComando_Test8TestBodyEv:
+function _ZN34PruebasServer_DesgloseComando_Test8TestBodyEv called 1 returned 100% blocks executed 34%
+        1:   30:TEST(PruebasServer, DesgloseComando){
+        2:   31:    std::string commando = "COMMAND-1-2-3-0";
+        1:   31-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+call    4 returned 1
+    $$$$$:   31-block  1
+    $$$$$:   31-block  2
+call    5 never executed
+       1*:   32:    EXPECT_TRUE("1" == Server(commando));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   32-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   32-block  1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 0 (fallthrough)
+branch 12 taken 1
+    %%%%%:   32-block  2
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+    %%%%%:   32-block  3
+call   16 never executed
+branch 17 never executed
+branch 18 never executed
+    %%%%%:   32-block  4
+call   19 never executed
+call   20 never executed
+branch 21 never executed
+branch 22 never executed
+    %%%%%:   32-block  5
+call   23 never executed
+branch 24 never executed
+branch 25 never executed
+    %%%%%:   32-block  6
+call   26 never executed
+call   27 never executed
+call   28 never executed
+        1:   32-block  7
+call   29 returned 1
+    $$$$$:   32-block  8
+    $$$$$:   32-block  9
+call   30 never executed
+    $$$$$:   32-block 10
+    $$$$$:   32-block 11
+call   31 never executed
+    $$$$$:   32-block 12
+    $$$$$:   32-block 13
+call   32 never executed
+    $$$$$:   32-block 14
+    $$$$$:   32-block 15
+call   33 never executed
+        1:   33:}
+------------------
+        -:   34:
+        4:   35:TEST(PruebasServer, Commando_IMG){
+        2:   36:    std::string commando = "IMG-1-0-0-0";
+        1:   37:    cout << buscar_Prueba(0,0,"1") << endl;
+       1*:   38:    EXPECT_TRUE(buscar_Prueba(0,0,"1") == Server(commando));
+        1:   39:}
+------------------
+_ZN31PruebasServer_Commando_IMG_TestC2Ev:
+function _ZN31PruebasServer_Commando_IMG_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   35:TEST(PruebasServer, Commando_IMG){
+        1:   35-block  0
+call    0 returned 1
+------------------
+_ZN31PruebasServer_Commando_IMG_TestD0Ev:
+function _ZN31PruebasServer_Commando_IMG_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   35:TEST(PruebasServer, Commando_IMG){
+        1:   35-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN31PruebasServer_Commando_IMG_TestD2Ev:
+function _ZN31PruebasServer_Commando_IMG_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   35:TEST(PruebasServer, Commando_IMG){
+        1:   35-block  0
+call    0 returned 1
+------------------
+_ZN31PruebasServer_Commando_IMG_Test8TestBodyEv:
+function _ZN31PruebasServer_Commando_IMG_Test8TestBodyEv called 1 returned 100% blocks executed 38%
+        1:   35:TEST(PruebasServer, Commando_IMG){
+        2:   36:    std::string commando = "IMG-1-0-0-0";
+        1:   36-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+call    4 returned 1
+    $$$$$:   36-block  1
+    $$$$$:   36-block  2
+call    5 never executed
+        1:   37:    cout << buscar_Prueba(0,0,"1") << endl;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   37-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   37-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:   37-block  2
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+        1:   37-block  3
+call   13 returned 1
+call   14 returned 1
+call   15 returned 1
+    $$$$$:   37-block  4
+call   16 never executed
+    $$$$$:   37-block  5
+    $$$$$:   37-block  6
+call   17 never executed
+    $$$$$:   37-block  7
+    $$$$$:   37-block  8
+call   18 never executed
+    $$$$$:   37-block  9
+       1*:   38:    EXPECT_TRUE(buscar_Prueba(0,0,"1") == Server(commando));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   38-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   38-block  1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:   38-block  2
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+        1:   38-block  3
+call   13 returned 1
+call   14 returned 1
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+branch 21 taken 0 (fallthrough)
+branch 22 taken 1
+    %%%%%:   38-block  4
+call   23 never executed
+branch 24 never executed
+branch 25 never executed
+    %%%%%:   38-block  5
+call   26 never executed
+branch 27 never executed
+branch 28 never executed
+    %%%%%:   38-block  6
+call   29 never executed
+call   30 never executed
+branch 31 never executed
+branch 32 never executed
+    %%%%%:   38-block  7
+call   33 never executed
+branch 34 never executed
+branch 35 never executed
+    %%%%%:   38-block  8
+call   36 never executed
+call   37 never executed
+call   38 never executed
+        1:   38-block  9
+call   39 returned 1
+    $$$$$:   38-block 10
+    $$$$$:   38-block 11
+    $$$$$:   38-block 12
+    $$$$$:   38-block 13
+    $$$$$:   38-block 14
+call   40 never executed
+    $$$$$:   38-block 15
+    $$$$$:   38-block 16
+call   41 never executed
+    $$$$$:   38-block 17
+    $$$$$:   38-block 18
+call   42 never executed
+    $$$$$:   38-block 19
+    $$$$$:   38-block 20
+call   43 never executed
+        1:   39:}
+------------------
+        -:   40:
+        4:   41:TEST(PruebasServer, Commando_MEMORIA){
+        2:   42:    std::string commando = "Matrix_mem-1-2-3-0";
+       1*:   43:    EXPECT_TRUE("False" == Server(commando));
+        1:   44:}
+------------------
+_ZN35PruebasServer_Commando_MEMORIA_TestC2Ev:
+function _ZN35PruebasServer_Commando_MEMORIA_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   41:TEST(PruebasServer, Commando_MEMORIA){
+        1:   41-block  0
+call    0 returned 1
+------------------
+_ZN35PruebasServer_Commando_MEMORIA_TestD0Ev:
+function _ZN35PruebasServer_Commando_MEMORIA_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   41:TEST(PruebasServer, Commando_MEMORIA){
+        1:   41-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN35PruebasServer_Commando_MEMORIA_TestD2Ev:
+function _ZN35PruebasServer_Commando_MEMORIA_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   41:TEST(PruebasServer, Commando_MEMORIA){
+        1:   41-block  0
+call    0 returned 1
+------------------
+_ZN35PruebasServer_Commando_MEMORIA_Test8TestBodyEv:
+function _ZN35PruebasServer_Commando_MEMORIA_Test8TestBodyEv called 1 returned 100% blocks executed 34%
+        1:   41:TEST(PruebasServer, Commando_MEMORIA){
+        2:   42:    std::string commando = "Matrix_mem-1-2-3-0";
+        1:   42-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+call    4 returned 1
+    $$$$$:   42-block  1
+    $$$$$:   42-block  2
+call    5 never executed
+       1*:   43:    EXPECT_TRUE("False" == Server(commando));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   43-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   43-block  1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 0 (fallthrough)
+branch 12 taken 1
+    %%%%%:   43-block  2
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+    %%%%%:   43-block  3
+call   16 never executed
+branch 17 never executed
+branch 18 never executed
+    %%%%%:   43-block  4
+call   19 never executed
+call   20 never executed
+branch 21 never executed
+branch 22 never executed
+    %%%%%:   43-block  5
+call   23 never executed
+branch 24 never executed
+branch 25 never executed
+    %%%%%:   43-block  6
+call   26 never executed
+call   27 never executed
+call   28 never executed
+        1:   43-block  7
+call   29 returned 1
+    $$$$$:   43-block  8
+    $$$$$:   43-block  9
+call   30 never executed
+    $$$$$:   43-block 10
+    $$$$$:   43-block 11
+call   31 never executed
+    $$$$$:   43-block 12
+    $$$$$:   43-block 13
+call   32 never executed
+    $$$$$:   43-block 14
+    $$$$$:   43-block 15
+call   33 never executed
+        1:   44:}
+------------------
+        -:   45:
+        4:   46:TEST(PruebasServer, Commando_START){
+        2:   47:    std::string commando = "Start-0-0-0-0";
+       1*:   48:    EXPECT_TRUE("Terminado" == Server(commando));
+        1:   49:}
+------------------
+_ZN33PruebasServer_Commando_START_TestC2Ev:
+function _ZN33PruebasServer_Commando_START_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   46:TEST(PruebasServer, Commando_START){
+        1:   46-block  0
+call    0 returned 1
+------------------
+_ZN33PruebasServer_Commando_START_TestD0Ev:
+function _ZN33PruebasServer_Commando_START_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   46:TEST(PruebasServer, Commando_START){
+        1:   46-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN33PruebasServer_Commando_START_TestD2Ev:
+function _ZN33PruebasServer_Commando_START_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   46:TEST(PruebasServer, Commando_START){
+        1:   46-block  0
+call    0 returned 1
+------------------
+_ZN33PruebasServer_Commando_START_Test8TestBodyEv:
+function _ZN33PruebasServer_Commando_START_Test8TestBodyEv called 1 returned 100% blocks executed 34%
+        1:   46:TEST(PruebasServer, Commando_START){
+        2:   47:    std::string commando = "Start-0-0-0-0";
+        1:   47-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+call    4 returned 1
+    $$$$$:   47-block  1
+    $$$$$:   47-block  2
+call    5 never executed
+       1*:   48:    EXPECT_TRUE("Terminado" == Server(commando));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   48-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   48-block  1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 0 (fallthrough)
+branch 12 taken 1
+    %%%%%:   48-block  2
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+    %%%%%:   48-block  3
+call   16 never executed
+branch 17 never executed
+branch 18 never executed
+    %%%%%:   48-block  4
+call   19 never executed
+call   20 never executed
+branch 21 never executed
+branch 22 never executed
+    %%%%%:   48-block  5
+call   23 never executed
+branch 24 never executed
+branch 25 never executed
+    %%%%%:   48-block  6
+call   26 never executed
+call   27 never executed
+call   28 never executed
+        1:   48-block  7
+call   29 returned 1
+    $$$$$:   48-block  8
+    $$$$$:   48-block  9
+call   30 never executed
+    $$$$$:   48-block 10
+    $$$$$:   48-block 11
+call   31 never executed
+    $$$$$:   48-block 12
+    $$$$$:   48-block 13
+call   32 never executed
+    $$$$$:   48-block 14
+    $$$$$:   48-block 15
+call   33 never executed
+        1:   49:}
+------------------
+        -:   50:
+        4:   51:TEST(PruebasServer, Commando_MIX){
+        2:   52:    std::string commando = "Mix-0-0-0-0";
+       1*:   53:    EXPECT_TRUE("Terminado" == Server(commando));
+        1:   54:}
+------------------
+_ZN31PruebasServer_Commando_MIX_TestC2Ev:
+function _ZN31PruebasServer_Commando_MIX_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   51:TEST(PruebasServer, Commando_MIX){
+        1:   51-block  0
+call    0 returned 1
+------------------
+_ZN31PruebasServer_Commando_MIX_TestD0Ev:
+function _ZN31PruebasServer_Commando_MIX_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   51:TEST(PruebasServer, Commando_MIX){
+        1:   51-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN31PruebasServer_Commando_MIX_TestD2Ev:
+function _ZN31PruebasServer_Commando_MIX_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   51:TEST(PruebasServer, Commando_MIX){
+        1:   51-block  0
+call    0 returned 1
+------------------
+_ZN31PruebasServer_Commando_MIX_Test8TestBodyEv:
+function _ZN31PruebasServer_Commando_MIX_Test8TestBodyEv called 1 returned 100% blocks executed 34%
+        1:   51:TEST(PruebasServer, Commando_MIX){
+        2:   52:    std::string commando = "Mix-0-0-0-0";
+        1:   52-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+call    4 returned 1
+    $$$$$:   52-block  1
+    $$$$$:   52-block  2
+call    5 never executed
+       1*:   53:    EXPECT_TRUE("Terminado" == Server(commando));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   53-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   53-block  1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 0 (fallthrough)
+branch 12 taken 1
+    %%%%%:   53-block  2
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+    %%%%%:   53-block  3
+call   16 never executed
+branch 17 never executed
+branch 18 never executed
+    %%%%%:   53-block  4
+call   19 never executed
+call   20 never executed
+branch 21 never executed
+branch 22 never executed
+    %%%%%:   53-block  5
+call   23 never executed
+branch 24 never executed
+branch 25 never executed
+    %%%%%:   53-block  6
+call   26 never executed
+call   27 never executed
+call   28 never executed
+        1:   53-block  7
+call   29 returned 1
+    $$$$$:   53-block  8
+    $$$$$:   53-block  9
+call   30 never executed
+    $$$$$:   53-block 10
+    $$$$$:   53-block 11
+call   31 never executed
+    $$$$$:   53-block 12
+    $$$$$:   53-block 13
+call   32 never executed
+    $$$$$:   53-block 14
+    $$$$$:   53-block 15
+call   33 never executed
+        1:   54:}
+------------------
+        -:   55:
+        -:   56:
+function main called 1 returned 100% blocks executed 100%
+        1:   57:int main(int argc, char* argv[]) {
+        1:   58:    testing::InitGoogleTest(&argc, argv);
+        1:   58-block  0
+call    0 returned 1
+        1:   59:    return RUN_ALL_TESTS();
+call    0 returned 1
+        -:   60:}

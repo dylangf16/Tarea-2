@@ -1,0 +1,362 @@
+        -:    0:Source:/home/dylan16/Documents/Datos2/Proyecto01/Proyecto-01-CE-2103/Matriz/Source_Files/Hashmap.cpp
+        -:    0:Graph:/home/dylan16/Documents/Datos2/Tarea#2/Tarea#2/Tarea-2/cmake-build-debug-coverage/CMakeFiles/Tarea_2.dir/Server.cpp.gcno
+        -:    0:Data:/home/dylan16/Documents/Datos2/Tarea#2/Tarea#2/Tarea-2/cmake-build-debug-coverage/CMakeFiles/Tarea_2.dir/Server.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <iostream>
+        -:    2:#include <map>
+        -:    3:#include <string>
+        -:    4:#include <fstream>
+        -:    5:#include <cstdlib>
+        -:    6:using namespace std;
+        -:    7:map<string,string> MisCartas;
+        -:    8:map<string,string> MisCartas2;
+        -:    9:string linea;
+        -:   10:int card1 = 0;
+        -:   11:int card2 = 0;
+        -:   12:int card3 = 0;
+        -:   13:int card4 = 0;
+        -:   14:int card5 = 0;
+        -:   15:
+        -:   16://Función que distribuye aleatoriamente la imagen de las 60 cartas
+function _Z5verfiB5cxx11i called 98 returned 100% blocks executed 67%
+       98:   17:string verfi(int tipo){
+       98:   18:    if(tipo == 1 & card1 < 12){
+       98:   18-block  0
+branch  0 taken 12 (fallthrough)
+branch  1 taken 86
+       24:   19:        string img = "/home/dylan16/Documents/Datos2/Proyecto01/Proyecto-01-CE-2103/Interfaz/Cliente_Memoria/imagenes/SW_1.jpg";
+       12:   19-block  0
+call    0 returned 12
+call    1 returned 12
+branch  2 taken 12 (fallthrough)
+branch  3 taken 0 (throw)
+call    4 returned 12
+    $$$$$:   19-block  1
+       12:   20:        card1+=1;
+       12:   21:        return img;
+call    0 returned 12
+        -:   22:    }
+       86:   23:    if(tipo == 2 & card2 < 12){
+       86:   23-block  0
+branch  0 taken 12 (fallthrough)
+branch  1 taken 74
+       24:   24:        string img = "/home/dylan16/Documents/Datos2/Proyecto01/Proyecto-01-CE-2103/Interfaz/Cliente_Memoria/imagenes/SW_2.jpg";
+       12:   24-block  0
+call    0 returned 12
+call    1 returned 12
+branch  2 taken 12 (fallthrough)
+branch  3 taken 0 (throw)
+call    4 returned 12
+    $$$$$:   24-block  1
+       12:   25:        card2+=1;
+       12:   26:        return img;
+call    0 returned 12
+        -:   27:    }
+       74:   28:    if(tipo == 3 & card3 < 12){
+       74:   28-block  0
+branch  0 taken 12 (fallthrough)
+branch  1 taken 62
+       24:   29:        string img = "/home/dylan16/Documents/Datos2/Proyecto01/Proyecto-01-CE-2103/Interfaz/Cliente_Memoria/imagenes/SW_3.jpg";
+       12:   29-block  0
+call    0 returned 12
+call    1 returned 12
+branch  2 taken 12 (fallthrough)
+branch  3 taken 0 (throw)
+call    4 returned 12
+    $$$$$:   29-block  1
+       12:   30:        card3+=1;
+       12:   31:        return img;
+call    0 returned 12
+        -:   32:    }
+       62:   33:    if(tipo == 4 & card4 < 12){
+       62:   33-block  0
+branch  0 taken 12 (fallthrough)
+branch  1 taken 50
+       24:   34:        string img = "/home/dylan16/Documents/Datos2/Proyecto01/Proyecto-01-CE-2103/Interfaz/Cliente_Memoria/imagenes/SW_4.jpg";
+       12:   34-block  0
+call    0 returned 12
+call    1 returned 12
+branch  2 taken 12 (fallthrough)
+branch  3 taken 0 (throw)
+call    4 returned 12
+    $$$$$:   34-block  1
+       12:   35:        card4+=1;
+       12:   36:        return img;
+call    0 returned 12
+        -:   37:    }
+       50:   38:    if(tipo == 5 & card5 < 12){
+       50:   38-block  0
+branch  0 taken 12 (fallthrough)
+branch  1 taken 38
+       24:   39:        string img = "/home/dylan16/Documents/Datos2/Proyecto01/Proyecto-01-CE-2103/Interfaz/Cliente_Memoria/imagenes/SW_5.jpg";
+       12:   39-block  0
+call    0 returned 12
+call    1 returned 12
+branch  2 taken 12 (fallthrough)
+branch  3 taken 0 (throw)
+call    4 returned 12
+    $$$$$:   39-block  1
+       12:   40:        card5+=1;
+       12:   41:        return img;
+call    0 returned 12
+        -:   42:    }
+        -:   43:    else{
+       38:   44:        int tipo = rand() % 5 + 1;
+       38:   44-block  0
+call    0 returned 38
+       38:   45:        return verfi(tipo);
+call    0 returned 38
+        -:   46:    }
+        -:   47:}
+        -:   48:
+        -:   49://Guarda el hashmap con la información de cada casilla en un txt
+function _Z7guardarv called 1 returned 100% blocks executed 70%
+        1:   50:void guardar(){
+        2:   51:    ifstream archivo("/home/dylan16/Documents/Datos2/Proyecto01/Proyecto-01-CE-2103/Matriz/Source_Files/hash.txt");
+        1:   51-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+    $$$$$:   51-block  1
+call    4 never executed
+        2:   52:    string linea;
+        1:   52-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   52-block  1
+call    2 never executed
+        2:   53:    string texto;
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   53-block  0
+call    2 never executed
+       61:   54:    while (getline(archivo,linea)){
+       61:   54-block  0
+call    0 returned 61
+branch  1 taken 61 (fallthrough)
+branch  2 taken 0 (throw)
+       61:   54-block  1
+call    3 returned 61
+branch  4 taken 61 (fallthrough)
+branch  5 taken 0 (throw)
+       61:   54-block  2
+branch  6 taken 60 (fallthrough)
+branch  7 taken 1
+       60:   55:        texto = texto + linea;
+       60:   55-block  0
+call    0 returned 60
+branch  1 taken 60 (fallthrough)
+branch  2 taken 0 (throw)
+       60:   55-block  1
+call    3 returned 60
+call    4 returned 60
+        -:   56:    }
+        1:   57:    archivo.close();
+        1:   57-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   58:
+        2:   59:    ofstream archivo2("/home/dylan16/Documents/Datos2/Proyecto01/Proyecto-01-CE-2103/Matriz/Source_Files/hash.txt");
+        1:   59-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   59-block  1
+call    3 returned 1
+    $$$$$:   59-block  2
+call    4 never executed
+       61:   60:    for (auto pair: MisCartas){
+        1:   60-block  0
+call    0 returned 1
+call    1 returned 1
+       61:   60-block  1
+call    2 returned 61
+branch  3 taken 60 (fallthrough)
+branch  4 taken 1
+       60:   60-block  2
+call    5 returned 60
+call    6 returned 60
+branch  7 taken 60 (fallthrough)
+branch  8 taken 0 (throw)
+call    9 returned 60
+    $$$$$:   60-block  3
+call   10 never executed
+       60:   61:        archivo2 << pair.first + "-"<< pair.second << "\n";
+       60:   61-block  0
+call    0 returned 60
+branch  1 taken 60 (fallthrough)
+branch  2 taken 0 (throw)
+       60:   61-block  1
+call    3 returned 60
+branch  4 taken 60 (fallthrough)
+branch  5 taken 0 (throw)
+       60:   61-block  2
+call    6 returned 60
+branch  7 taken 60 (fallthrough)
+branch  8 taken 0 (throw)
+       60:   61-block  3
+call    9 returned 60
+branch 10 taken 60 (fallthrough)
+branch 11 taken 0 (throw)
+       60:   61-block  4
+call   12 returned 60
+call   13 returned 60
+    $$$$$:   61-block  5
+call   14 never executed
+    $$$$$:   61-block  6
+        -:   62:    }
+        1:   63:    archivo2.close();
+        1:   63-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   64:}
+        -:   65:
+        -:   66://Genera el hashmap inicial según la matriz
+function _Z11generarHashv called 1 returned 100% blocks executed 67%
+        1:   67:void generarHash(){
+        1:   68:    srand(time(NULL));
+        1:   68-block  0
+call    0 returned 1
+call    1 returned 1
+       61:   69:    for (int i = 0; i < 60; i++){
+       61:   69-block  0
+branch  0 taken 60 (fallthrough)
+branch  1 taken 1
+       60:   70:        int tipo = 1+rand() % 6 - 1;
+       60:   70-block  0
+call    0 returned 60
+       60:   71:        MisCartas.insert(pair<string,string>(to_string(i),verfi(tipo)));
+call    0 returned 60
+call    1 returned 60
+branch  2 taken 60 (fallthrough)
+branch  3 taken 0 (throw)
+       60:   71-block  0
+call    4 returned 60
+call    5 returned 60
+branch  6 taken 60 (fallthrough)
+branch  7 taken 0 (throw)
+       60:   71-block  1
+call    8 returned 60
+call    9 returned 60
+call   10 returned 60
+    $$$$$:   71-block  2
+call   11 never executed
+    $$$$$:   71-block  3
+    $$$$$:   71-block  4
+call   12 never executed
+    $$$$$:   71-block  5
+    $$$$$:   71-block  6
+call   13 never executed
+        -:   72:    }
+        1:   73:    guardar();
+        1:   73-block  0
+call    0 returned 1
+        1:   74:}
+        -:   75:
+        -:   76:
+        -:   77://Permite la búsqueda de la imágen según el número de la carta
+function _Z6buscariiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 59%
+        1:   78:string buscar(int init, int end, string num_a_buscar){
+        2:   79:    ifstream archivo("/home/dylan16/Documents/Datos2/Proyecto01/Proyecto-01-CE-2103/Matriz/Source_Files/hash.txt");
+        1:   79-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+    $$$$$:   79-block  1
+call    4 never executed
+        2:   80:    string linea;
+        1:   80-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   80-block  1
+call    2 never executed
+        2:   81:    string texto;
+call    0 returned 1
+        1:   81-block  0
+call    1 returned 1
+    $$$$$:   81-block  1
+call    2 never executed
+        1:   82:    int i = 0;
+       1*:   83:    while (i < 500){
+        1:   83-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+    %%%%%:   83-block  1
+        1:   84:        getline(archivo,linea);
+        1:   84-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   85:        while (end = linea.find("-", init), end >=0){
+        2:   85-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0
+        1:   85-block  1
+        2:   86:            if(linea.substr(init, end - init) == num_a_buscar){
+        2:   86-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   86-block  1
+call    3 returned 2
+call    4 returned 2
+branch  5 taken 1 (fallthrough)
+branch  6 taken 1
+        1:   87:                init = end + 1;
+        1:   88:                return linea.substr(init, end - init);
+        1:   88-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   89:            }
+        1:   90:            i++;
+        1:   91:            getline(archivo,linea);
+        1:   91-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   92:        }
+    #####:   93:        i++;
+    #####:   94:        getline(archivo,linea);
+    %%%%%:   94-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   95:    }
+    #####:   96:    return "Fallido";
+    %%%%%:   96-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   96-block  1
+call    4 never executed
+    $$$$$:   96-block  2
+call    5 never executed
+    $$$$$:   96-block  3
+        -:   97:}
+        -:   98:
+        -:   99:/*
+        -:  100:int main(){
+        -:  101:    generarHash();
+        -:  102:
+        -:  103:    
+        -:  104:    for(auto pair : MisCartas){
+        -:  105:        int i = 0;
+        -:  106:        cout << pair.first << " - " << pair.second << endl;
+        -:  107:        }
+        -:  108:
+        -:  109:    string num_a_buscar = "15";
+        -:  110:    guardar();
+        -:  111:    string s = buscar(0,0,num_a_buscar);
+        -:  112:    cout << s << endl;
+        -:  113:    
+        -:  114:
+        -:  115:    return 0;
+        -:  116:}
+        -:  117:*/

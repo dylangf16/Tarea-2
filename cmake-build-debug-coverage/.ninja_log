@@ -1,0 +1,15 @@
+# ninja log v5
+2	789	1651361697000082441	CMakeFiles/Tarea_2.dir/Server.cpp.o	947ad1a9de79e23
+2	1453	1651361697664084219	CMakeFiles/Tarea_2.dir/main.cpp.o	b3ffb5e2cc8fb61c
+6036	6122	1651361702332096711	lib/libgtest.a	eb68437f8ea80544
+2	1035	1651361697248083105	lib/googletest-main/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	813053197e950ac5
+6133	6342	1651361702552097299	Tarea_2	e7f31bdd31989ec1
+6123	6132	1651361702344096743	lib/libgtest_main.a	ae1b5178f5a9e378
+2	6036	1651361702240096465	lib/googletest-main/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	8acb871abb274d5d
+3	732	1651361777724294026	CMakeFiles/Tarea_2.dir/Server.cpp.o	a098aebd43a03978
+3	1024	1651361778016294775	lib/googletest-main/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	38fa2a97f75c390d
+2	1332	1651361778324295566	CMakeFiles/Tarea_2.dir/main.cpp.o	6bb189fa1b14604d
+3	5421	1651361782404306015	lib/googletest-main/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	53ab69defe55804d
+5421	5498	1651361782480306209	lib/libgtest.a	eb68437f8ea80544
+5498	5508	1651361782504306271	lib/libgtest_main.a	ae1b5178f5a9e378
+5508	5672	1651361782664306680	Tarea_2	e7f31bdd31989ec1

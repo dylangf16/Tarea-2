@@ -1,0 +1,11 @@
+# ninja log v5
+2224	2251	1650921923853541186	lib/libgmock.a	3b576ffd450c2669
+3	887	1651361753472231433	CMakeFiles/Tarea_2.dir/Server.cpp.o	b2f090c7ed1ae855
+3	1751	1651361754336233678	CMakeFiles/Tarea_2.dir/main.cpp.o	5889ef504170dcab
+5811	5860	1651361758444244331	lib/libgtest.a	eb68437f8ea80544
+0	97	1651361775720288883	build.ninja	10b1dc14654ca1ad
+5	1270	1651361753856232431	lib/googletest-main/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	f9c3e6cca135bd58
+1	2224	1650921923825541103	lib/googletest-main/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o	ceee263c7b8cbd3e
+5889	6036	1651361758620244788	Tarea_2	c677b9fe09e518a9
+5860	5889	1651361758456244363	lib/libgtest_main.a	ae1b5178f5a9e378
+4	5811	1651361758388244186	lib/googletest-main/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	159b3d0cdf961eea

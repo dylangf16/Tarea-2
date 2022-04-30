@@ -1,0 +1,305 @@
+        -:    0:Source:/home/dylan16/Documents/Datos2/Proyecto01/Proyecto-01-CE-2103/Matriz/Source_Files/matriz.cpp
+        -:    0:Graph:/home/dylan16/Documents/Datos2/Tarea#2/Tarea#2/Tarea-2/cmake-build-debug-coverage/CMakeFiles/Tarea_2.dir/Server.cpp.gcno
+        -:    0:Data:/home/dylan16/Documents/Datos2/Tarea#2/Tarea#2/Tarea-2/cmake-build-debug-coverage/CMakeFiles/Tarea_2.dir/Server.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <stdlib.h>
+        -:    2:#include <time.h>
+        -:    3:#include <iostream>
+        -:    4:#include <fstream>
+        -:    5:#include <cstdlib>
+        -:    6:using namespace std;
+        -:    7:
+        -:    8:int nFilas = 6;
+        -:    9:int nCol = 10;
+        -:   10:int numeros[6][10];
+        -:   11:int numeros2[6][10];
+        -:   12:string linea3;
+        -:   13:
+        -:   14://Guarda la matriz en memoria
+function _Z13guardarmatrixv called 1 returned 100% blocks executed 87%
+        1:   15:void guardarmatrix(){
+        2:   16:    ofstream archivo("/home/dylan16/Documents/Datos2/Proyecto01/Proyecto-01-CE-2103/Matriz/Source_Files/disco.txt");
+        1:   16-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   16-block  1
+call    3 returned 1
+    $$$$$:   16-block  2
+call    4 never executed
+        7:   17:    for (int i = 0; i < nFilas; i++){
+        1:   17-block  0
+        7:   17-block  1
+branch  0 taken 6 (fallthrough)
+branch  1 taken 1
+        6:   17-block  2
+       66:   18:        for (int j = 0; j < nCol; j++){
+        6:   18-block  0
+       66:   18-block  1
+branch  0 taken 60 (fallthrough)
+branch  1 taken 6
+       60:   18-block  2
+       60:   19:            archivo << numeros[i][j];
+       60:   19-block  0
+call    0 returned 60
+branch  1 taken 60 (fallthrough)
+branch  2 taken 0 (throw)
+       60:   20:            archivo << endl;
+       60:   20-block  0
+call    0 returned 60
+branch  1 taken 60 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   21:        }
+        -:   22:    }
+        1:   23:    archivo.close();
+        1:   23-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   24:}
+        -:   25:
+        -:   26://Guarda la matriz en memoria
+function _Z14guardarmatrix2v called 3 returned 100% blocks executed 87%
+        3:   27:void guardarmatrix2(){
+        6:   28:    ofstream archivo("/home/dylan16/Documents/Datos2/Proyecto01/Proyecto-01-CE-2103/Matriz/Source_Files/disco.txt");
+        3:   28-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   28-block  1
+call    3 returned 3
+    $$$$$:   28-block  2
+call    4 never executed
+       21:   29:    for (int i = 0; i < nFilas; i++){
+        3:   29-block  0
+       21:   29-block  1
+branch  0 taken 18 (fallthrough)
+branch  1 taken 3
+       18:   29-block  2
+      198:   30:        for (int j = 0; j < nCol; j++){
+       18:   30-block  0
+      198:   30-block  1
+branch  0 taken 180 (fallthrough)
+branch  1 taken 18
+      180:   30-block  2
+      180:   31:            archivo << numeros2[i][j];
+      180:   31-block  0
+call    0 returned 180
+branch  1 taken 180 (fallthrough)
+branch  2 taken 0 (throw)
+      180:   32:            archivo << endl;
+      180:   32-block  0
+call    0 returned 180
+branch  1 taken 180 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   33:        }
+        -:   34:    }
+        3:   35:    archivo.close();
+        3:   35-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   36:}
+        -:   37:
+        -:   38://Escoge una columna aleatoria para cambiar de posición
+function _Z18aleatorio_en_rangoii called 120 returned 100% blocks executed 100%
+      120:   39:int aleatorio_en_rango(int minimo, int maximo) {
+      120:   40:    return minimo + rand() / (RAND_MAX / (maximo - minimo + 1) + 1);
+      120:   40-block  0
+call    0 returned 120
+        -:   41:}
+        -:   42:
+        -:   43://Revuelve la matriz obtenida del txt
+function _Z14revolverMatrizv called 2 returned 100% blocks executed 83%
+        2:   44:void revolverMatriz(){
+        4:   45:    ifstream archivo("/home/dylan16/Documents/Datos2/Proyecto01/Proyecto-01-CE-2103/Matriz/Source_Files/disco.txt");
+        2:   45-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   45-block  1
+call    3 returned 2
+    $$$$$:   45-block  2
+call    4 never executed
+        2:   46:    srand(time(NULL));
+        2:   46-block  0
+call    0 returned 2
+call    1 returned 2
+       14:   47:    for (int i = 0; i < nFilas; i++){
+       14:   47-block  0
+branch  0 taken 12 (fallthrough)
+branch  1 taken 2
+       12:   47-block  1
+      132:   48:        for(int j = 0; j <nCol; j++){
+       12:   48-block  0
+      132:   48-block  1
+branch  0 taken 120 (fallthrough)
+branch  1 taken 12
+      120:   49:            std::string linea;
+      120:   49-block  0
+call    0 returned 120
+    $$$$$:   49-block  1
+call    1 never executed
+      120:   50:            getline(archivo,linea);
+call    0 returned 120
+branch  1 taken 120 (fallthrough)
+branch  2 taken 0 (throw)
+      120:   51:            int num = stoi(linea);
+      120:   51-block  0
+call    0 returned 120
+branch  1 taken 120 (fallthrough)
+branch  2 taken 0 (throw)
+      120:   52:            numeros2[i][j] = num;
+      120:   52-block  0
+call    0 returned 120
+        -:   53:        }
+        -:   54:    }
+        2:   55:    int longitud = sizeof(numeros2) / sizeof(numeros2[0]);
+        -:   56:
+       14:   57:    for (int i = 0; i < nFilas; i++){
+        2:   57-block  0
+       14:   57-block  1
+branch  0 taken 12 (fallthrough)
+branch  1 taken 2
+       12:   57-block  2
+      132:   58:        for(int j = 0; j <nCol; j++){
+       12:   58-block  0
+      132:   58-block  1
+branch  0 taken 120 (fallthrough)
+branch  1 taken 12
+      120:   59:            int indiceAleatorio = aleatorio_en_rango(0, longitud - 1);
+      120:   59-block  0
+call    0 returned 120
+        -:   60:            // Intercambiar el actual con un elemento del índice aleatorio
+      120:   61:            int temporal = numeros2[i][j];
+      120:   62:            numeros2[i][j] = numeros2[indiceAleatorio][j];
+      120:   63:            numeros2[indiceAleatorio][j] = temporal;
+        -:   64:        }
+        -:   65:    }
+        2:   66:    guardarmatrix2();
+        2:   66-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   67:}
+        -:   68:
+        -:   69://Genera la matriz original ordenada de mayor a menor
+function _Z13generarMatrizv called 1 returned 100% blocks executed 100%
+        1:   70:void generarMatriz(){
+        1:   71:    int num = 0;
+        -:   72:    //Rellenando la matriz
+        7:   73:    for(int i=0;i<nFilas;i++) {
+        1:   73-block  0
+        7:   73-block  1
+branch  0 taken 6 (fallthrough)
+branch  1 taken 1
+        6:   73-block  2
+       66:   74:        for (int j = 0; j < nCol; j++) {
+        6:   74-block  0
+       66:   74-block  1
+branch  0 taken 60 (fallthrough)
+branch  1 taken 6
+       60:   75:            numeros[i][j] = num;
+       60:   76:            num++;
+       60:   76-block  0
+        -:   77:        }
+        -:   78:    }
+        1:   79:    guardarmatrix();
+        1:   79-block  0
+call    0 returned 1
+        1:   80:    revolverMatriz();
+call    0 returned 1
+        1:   81:    guardarmatrix2();
+call    0 returned 1
+        1:   82:}
+        -:   83:
+        -:   84://Muestra la matriz en terminal
+function _Z20mostrar_matriz_discoii called 1 returned 100% blocks executed 91%
+        1:   85:void mostrar_matriz_disco(int nFilasMem, int nColMem){
+        2:   86:    ifstream archivo("/home/dylan16/Documents/Datos2/Proyecto01/Proyecto-01-CE-2103/Matriz/Source_Files/disco.txt");
+        1:   86-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   86-block  1
+call    3 returned 1
+    $$$$$:   86-block  2
+call    4 never executed
+        1:   87:    int contador = 0;
+        1:   88:    int lim = nFilasMem*nColMem;
+        1:   89:    cout << "Imprimiendo la matriz en disco" << endl;
+        1:   89-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   89-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        7:   90:    for (int i = 0; i < nFilas; i++){
+        1:   90-block  0
+        7:   90-block  1
+branch  0 taken 6 (fallthrough)
+branch  1 taken 1
+        6:   90-block  2
+       66:   91:        for (int j = 0; j < nCol; j++){
+        6:   91-block  0
+       66:   91-block  1
+branch  0 taken 60 (fallthrough)
+branch  1 taken 6
+       60:   91-block  2
+       60:   92:            if(contador >= lim){
+       60:   92-block  0
+branch  0 taken 58 (fallthrough)
+branch  1 taken 2
+       58:   93:                getline(archivo,linea3);
+       58:   93-block  0
+call    0 returned 58
+branch  1 taken 58 (fallthrough)
+branch  2 taken 0 (throw)
+       58:   94:                cout << linea3 << " ";
+       58:   94-block  0
+call    0 returned 58
+branch  1 taken 58 (fallthrough)
+branch  2 taken 0 (throw)
+       58:   94-block  1
+call    3 returned 58
+branch  4 taken 58 (fallthrough)
+branch  5 taken 0 (throw)
+        -:   95:            }else{
+        2:   96:                getline(archivo,linea3);
+        2:   96-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   97:                contador++;
+        2:   97-block  0
+        -:   98:            }
+        -:   99:        }
+        6:  100:        cout << "\n";
+        6:  100-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  101:    }
+        1:  102:    cout << "\n";
+        1:  102-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  103:    
+        1:  104:}
+        -:  105:
+        -:  106:/*
+        -:  107:int main() {
+        -:  108:    //En clase Matriz
+        -:  109:    //generarMatriz();
+        -:  110:    //guardarmatrix();
+        -:  111:    //guardarmatrix2();
+        -:  112:
+        -:  113:    //En clase matriz_dinamica
+        -:  114:    rellenarMatriz(4,5);
+        -:  115:
+        -:  116:    return **numeros;
+        -:  117:}
+        -:  118:*/
